@@ -15,16 +15,16 @@ module OmniAuth
         :site => "https://trello.com"
       }
 
-      uid do 
+      uid do
         user_info['id']
       end
-      
+
       info do
         {
           :email => raw_info['email']
         }
       end
-      
+
       extra do
         {
           :raw_info => raw_info
@@ -40,7 +40,7 @@ module OmniAuth
       def user_info
         @user_info ||= raw_info.nil? ? {} : raw_info
       end
-      
+
       def request_phase
         options[:authorize_params] = {:perms => options[:scope]} if options[:scope]
         super
