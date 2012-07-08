@@ -1,6 +1,10 @@
-## Omniauth strategy for trello
+### Omniauth strategy for trello
 
-> Rails.application.config.middleware.use OmniAuth::Builder do
->  provider :developer unless Rails.env.production?
->  provider :trello
-> end
+You'd better use ruby-trello for now )
+
+To Enable
+---------
+
+ Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :trello, 'consumer_key', 'consumer_secret'
+ end

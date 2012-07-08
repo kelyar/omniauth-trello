@@ -1,2 +1,1 @@
-require 'omniauth-trello/version'
-require 'omniauth/strategies/trello'
+require 'omniauth/trello'
