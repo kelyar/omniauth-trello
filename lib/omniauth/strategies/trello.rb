@@ -38,7 +38,7 @@ module OmniAuth
       end
 
       def user_info
-        @user_info ||= raw_info.nil? ? {} : raw_info["user"]
+        @user_info ||= raw_info.nil? ? {} : raw_info
       end
       
       def request_phase
